@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+            padding-top:200px ;
+        }
+        #but{
+            display: flex;
+            justify-content: center;
+            padding-top:50px ;
+        }
+        .btn{
+            display: block;
+            padding: auto;
+            
+            height: 50px;
+            width:50px
+    
+        }
+        #red{
+            background-color: red;
+            border: 1px solid rgb(56, 47, 47);
+        }
+        #white{
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(56, 47, 47);
+        }
+        #black{
+            background-color: rgb(0, 0, 0);
+            border: 1px solid rgb(197, 196, 196);
+        }
+        #yellow{
+            background-color: yellow;
+            border: 1px solid rgb(56, 47, 47);
+        }
+        #pink{
+            background-color: pink;
+            border: 1px solid rgb(56, 47, 47);
+        }
+        #orange{
+            background-color: orange;
+            border: 1px solid rgb(56, 47, 47);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Colour Changer</h1>
+    <div id="but">
+        
+    <button class="btn" id="red"> </button>
+    <button class="btn" id="white"></button>
+    <button class="btn" id="black"></button>
+    <button class="btn" id="yellow"></button>
+    <button class="btn" id="pink"></button>
+    <button class="btn" id="orange"></button>
+</div>
+</body>
+    <script>
+      let buttons=document.getElementsByClassName("btn")
+      let arr=Array.from(buttons)
+      let bodys=document.querySelector("body")
+
+      arr.forEach(function(but){
+        but.addEventListener("click",function(e){
+            console.log(e.target.id);
+            if(e.target.id==="red"){
+                bodys.style.backgroundColor="red"
+                
+            }
+            if(e.target.id==="white"){
+                bodys.style.backgroundColor="white"
+                bodys.style.color="black"
+            }
+            if(e.target.id==="black"){
+                bodys.style.backgroundColor="black"
+                bodys.style.color="white"
+            }
+            if(e.target.id==="yellow"){
+                bodys.style.backgroundColor="yellow"
+
+            }
+            if(e.target.id==="pink"){
+                bodys.style.backgroundColor="pink"
+
+            }
+            if(e.target.id==="orange"){
+                bodys.style.backgroundColor="orange"
+
+            }
+
+        })
+        
+      })
+      
+     
+        
+    
+    </script>
+</html>
